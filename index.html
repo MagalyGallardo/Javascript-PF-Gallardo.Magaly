@@ -45,20 +45,24 @@
     <main>
         <section id="inicio">
             <div class="row justify-content-center align-items-center my-5">
-                <h1 class="text-center">Entrená con nosotros y convertite en un verdadero Guerrero</h1>
-                <p class="text-center my-3">Sea que te apasione el deporte o quieras empezar una actividad física para mejorar tu salud, te inivtamor a conocernos</p>
-                <p class="text-center my-3">Nos encantaría que te sumes a entrenar con nosotros, por eso eso eligas la actividad que eligas, tu primera clase es gratis</p>
-                <a href="#registro" class="text-center mt-5"><button class="btn btn-dark">Sumate</button></a>
+                <div class="col-md-8">
+                    <h1 class="text-center">Entrená con nosotros y convertite en un verdadero Guerrero</h1>
+                    <p class="text-center my-3">Sea que te apasione el deporte o quieras empezar una actividad física para mejorar tu salud, te inivtamor a conocernos</p>
+                    <p class="text-center my-3">Nos encantaría que te sumes a entrenar con nosotros, por eso eso eligas la actividad que eligas, tu primera clase es gratis</p>
+                </div>
+                <a href="#registro" class="text-center mt-3"><button class="btn btn-dark text-center">Sumate</button></a>
             </div>
         </section>
         <section id="quienessomos">
             <div class="row justify-content-center align-items-center my-5 border-top border-bottom border-2  py-2">
-                <h2 class="text-center">¿Quienes somos?</h2>
-                <p class="text-center my-3 px-5">Somos más que un Gimnasio, somos un centro de mútiples deportes. Contamos con los mejores y más dedicados profesionales de distintas areas para brindarte todo aquello que necesites para mejorar tu salud y sentirte cada día mejor.</p>
-                <p class="text-center my-3 px-5">Seas un amante del deporte como nosotros o bien quieras iniciar en este mundo y prácticar una actividad física para mejorar tu salud, contamos con todo el equipamiento y un staff de profesores para indicarte como iniciar o bien para ayudarte a superarte cada día</p>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+               <div class="col-md-8">
+                    <h2 class="text-center">¿Quienes somos?</h2>
+                    <p class="text-center my-3 px-5">Somos más que un Gimnasio, somos un centro de mútiples deportes. Contamos con los mejores y más dedicados profesionales de distintas areas para brindarte todo aquello que necesites para mejorar tu salud y sentirte cada día mejor.</p>
+                    <p class="text-center my-3 px-5">Seas un amante del deporte como nosotros o bien quieras iniciar en este mundo y prácticar una actividad física para mejorar tu salud, contamos con todo el equipamiento y un staff de profesores para indicarte como iniciar o bien para ayudarte a superarte cada día</p>
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+               </div>
             </div>
         </section>
         <section id="registro">
@@ -66,18 +70,18 @@
                 <div class="col-md-3">
                     <h2 class="mb-5 text-center">Registrate</h2>
                     <form method="post" action='' id="send" >
-                        <fieldset class="my-3">
+                        <fieldset class="my-3 text-center">
                             <div class="mb-3">
-                                <label for="first-name"><strong>Nombre:</strong> <input id="first-name" name="first-name" type="text" required /></label>
+                                <label for="first-name text-center"><strong>Nombre:</strong> <input id="first-name" name="first-name" type="text" required /></label>
                             </div>
                             <div  class="mb-3">
-                                <label for="last-name"><strong>Apellido:</strong> <input id="last-name" name="last-name" type="text" required /></label>
+                                <label for="last-name text-center"><strong>Apellido:</strong> <input id="last-name" name="last-name" type="text" required /></label>
                             </div>
                             <div  class="mb-3">
-                                <label for="email"><strong>Email:</strong> <input id="email" name="email" type="email" required /></label>
+                                <label for="email text-center"><strong>Email:</strong> <input id="email" name="email" type="email" required /></label>
                             </div>
                         </fieldset>
-                        <fieldset class="my-3">
+                        <fieldset class="my-3 text-center">
                             <div class="mb-3">
                                 <label for="profile-picture">Subí una foto tuya: </label>
                             </div>
@@ -109,12 +113,12 @@
                             </div>
                         </label>
                         </fieldset>
-                        <fieldset class="my-2">
+                        <fieldset class="my-2 text-center">
                             <label for="terms-and-conditions">
                             <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="mx-2 mb-3" />Acepto los <a href="">términos y condiciones</a>
                             </label>
+                            <input type="submit" value="Enviar"  id="" class="btn btn-dark mt-3"/>
                         </fieldset>
-                        <input type="submit" value="Enviar"  id="" class="btn btn-dark"/>
                     </form>
                 </div>
             </div>
@@ -123,7 +127,7 @@
             <div class="row justify-content-center align-items-center my-3 border-top border-2 py-2">
                 <div class="col-md-6">
                     <h2 class="text-center mb-3">Actividades</h2>
-                    <p class="text-center px-5">En esta sección te contamos las activades que podés prácticar y sus respectivos precios.</p>
+                    <p class="text-center px-5">En esta sección te contamos las actividades que podés prácticar y sus respectivos precios.</p>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -213,60 +217,29 @@
                 </div>
                 <!---------------Consultar actividades------------------------->
                 <div class="row my-5 justify-content-center align-items-center border-top border-bottom border-2 py-2">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <h3 class="text-center">
                             Consultar precios de actividades
                         </h3>
                         <p class="text-center my-3 px-3"> Ahora conocés nuestras actividades y que implica cada una de ellas. Si te interesó una o varias, podes consultar los precios de cada una.</p>
                         <div class="row justify-content-center align-items-center">
-                            <div class="col-md-3">
-                                <!---------------aca esta el input para tomar el dato y usar le find con dom------------------------->
-                                <input type="text" id="busquedaActividad" placeholder="Escribí el nombre de la actividad que queres consultar..." >
-                                <!---------------Este div de abajo puede servir para mostrar el resultado con js------------------------->
-                               <div class="row justify-content-center align-items-center">
-                                    <div class="col-md-1">
-                                        <button type="submit" class="btn btn-dark mt-3" id="buscar"> Buscar</button>
-                                    </div>
-                               </div>
-                               <div class="row justify-content-center align-items-center my-3 text-center fw-bolder" id="resultadoActividadBuscada"></div>
-                                </div>
-                            </div>
+                        <!---------------aca esta el input para tomar el dato y usar le find con dom------------------------->
+                            <input type="text" id="busquedaActividad" placeholder="Escribí el nombre de la actividad que queres consultar..." >
+                        <!---------------Este div de abajo puede servir para mostrar el resultado con js------------------------->
+                            <button type="submit" class="btn btn-dark mt-3" id="buscar"> Buscar</button>
+                            <div class="row justify-content-center align-items-center my-3 text-center fw-bolder" id="resultadoActividadBuscada"></div>
                         </div>
                     </div>
                 </div>
                 <!---------------FIN Consultar actividades------------------------->
-                <!---------------Primera Opción para el presupuesto con inputs------------------------->
-                <div class="row justify-content-center align-items-center my-5">
-                    <h2 class="text-center">Consulta tu presupuesto</h2>
-                    <div class="col-md-3">
-                        <form method="post" action=''>
-                            <fieldset class="my-3">
-                                <div class="mb-3">
-                                    <label for="">Escribí el nombre (o número) de la actividad que queres realizar:<input id="actividaduno" name="actividaduno" type="text" required /></label>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="">Escribí tu genero: <input id="gen" name="gen" type="text" required /></label>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="">¿Es tu primera vez? (Si/No):<input id="primeravez" name="primeravez" type="text" required /></label>
-                                </div>
-                            </fieldset>
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col-md-1">
-                                        <button type="submit" class="btn btn-dark mt-3" id=""> Consultar</button>
-                                        <div class="text-center display-5 fw-bolder" id=""></div>
-                                    </div>
-                                </div>
-                        </form>
-                    </div>
-                </div>
-                <!---------------FIN Primera opción para el presupuesto------------------------->
-                <!---------------Segunda opción para el presupuesto usando inputs tipo radioselector------------------------>
-                <div class="row justify-content-center align-items-center my-5">
-                    <div class="col-md-3">
-                        <form method="post" action=''>
-                            <fieldset class="my-3">
-                                <label for="actividadPresupuesto">¿Selecciona la actividad que queres realizar:
+                <!---------------Consultar presupuesto usando inputs tipo radioselector------------------------>
+                <div class="row justify-content-center align-items-center my-3 border-bottom border-2 pb-2">
+                    <div class="col-md-4">
+                        <h2 class="text-center fw-bolder mb-3">Presupuestos</h2>
+                        <p class="text-center">Aqui podrás consultar tu presupuesto para realizar actividades, con beneficios exclusivos.</p>
+                        <form method="post" action='' id="consultar" >
+                            <fieldset class="my-3 text-center">
+                                <label for="actividadPresupuesto">Selecciona la actividad que queres realizar:
                                 </div>
                                 <div class="mb-3 text-center">
                                     <select id="actividadPresupuesto" name="actividadPresupuesto">
@@ -300,7 +273,7 @@
                             </div>
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-md-1">
-                                    <button type="submit" class="btn btn-dark mt-3" id="consultar" >Calcular Presupuesto</button>
+                                    <button type="submit" class="btn btn-dark mt-3">Calcular Presupuesto</button>
                                     <div class="text-center display-5 fw-bolder mb-4" id="resultadoPresupuesto"></div>
                                 </div>
                             </div>

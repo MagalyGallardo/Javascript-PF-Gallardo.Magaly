@@ -1,5 +1,6 @@
-            // Consultar precio de actividad (hay que escribir con las respectivas mayúsculas)
-  
+            // Consultar precio de actividad (hay que escribir con las respectivas mayúsculas) 
+            // Se agregan Dom, se eliminan los prompt y alerts, se realiza evento
+            
             let actividadBuscada = document.getElementById("busquedaActividad");
 
             function busquedaActividad() {
@@ -32,29 +33,8 @@
             }
             
             
-            //Presupuesto
+            //Proyecto Presupuesto
          
-           
-           
-            /*
-            
-
-               function presupuestoForm() {
-              e.preventDefault();
-            let presupuesto = 0;
-            if (radioUnoSeleccionado.value === "si" && radioTresSeleccionado.name === "masculino") {
-              presupuesto = (actividadPresupuesto / 2) - (actividadPresupuesto * 10 / 100);
-            } else if (radioUnoSeleccionado.value === "si" && radioCuatroSeleccionado.name === "femenino") {
-              presupuesto = (actividadPresupuesto / 2) - (actividadPresupuesto * 5 / 100);
-            } else if (radioDosSeleccionado.value === "no" && radioSeleccionado.name === "masculino") {
-              presupuesto = (actividadPresupuesto * 10) / 100;
-            } else {
-              presupuesto = (actividadPresupuesto * 5) / 100;
-            }
-          
-            return presupuesto;
-          };
-
            
           let actividadPresupuesto = document.querySelector("#actividadPresupuesto");
           const radioSeleccionado = document.querySelector('input[type="radio"]:checked');
@@ -78,21 +58,20 @@
 
 
             let consultar = document.getElementById("consultar");
-            consultar.addEventListener("click", presupuesto);
+            consultar.addEventListener("submit", presupuesto);
             let presupuestoEncontrado = presupuestoForm();
             
             function presupuesto() {
                 e.preventDefault();
               let consultarPresupuesto = document.getElementById("resultadoPresupuesto");
-             
-            
               if (presupuestoEncontrado) {
-                mensaje.innerHTML = ("El es de: $" + presupuestoEncontrado);
+                mensaje.innerHTML = ("El precio final es de: $" + presupuestoEncontrado);
               } else {
-                mensaje.innerHTML = ("El es de: $" + presupuestoEncontrado);
+                mensaje.innerHTML = ("El precio final es de: $" + presupuestoEncontrado);
               }
             }
- */
+
+  
         //Storage & JSON (reparado codigo)
 
 function guardarLocalStorage(e){
