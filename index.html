@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spartan Fitness Center</title>
+    <!-----------------------FAVICON----------------------->
+    <link rel="shortcut icon" href="img/positivo-fondo-blanco.png" type="Logo icono">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body class="container-fluid">
+    <header class="container-fluid border-bottom border-dark">
+        <!---------------NAVBAR------------------------->
+        <nav class="navbar navbar-expand-md py-2">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./img/positivo-fondo-blanco.png" alt="logo Spartan">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-1">
+                        <li class="nav-item">
+                            <a class="nav-link mx-1 fw-bolder" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-1 fw-bolder" href="#quienessomos">Quienes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-1 fw-bolder" href="#registro">Registrate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-1 fw-bolder" href="#actividades">Actividades</a>
+                        </li>
+                        <li class="nav-item fw-bolder">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!---------------FIN NAVBAR------------------------->
+    </header>
+    <main>
+        <section id="inicio">
+            <div class="row justify-content-center align-items-center my-5">
+                <h1 class="text-center">Entrená con nosotros y convertite en un verdadero Guerrero</h1>
+                <p class="text-center my-3">Sea que te apasione el deporte o quieras empezar una actividad física para mejorar tu salud, te inivtamor a conocernos</p>
+                <p class="text-center my-3">Nos encantaría que te sumes a entrenar con nosotros, por eso eso eligas la actividad que eligas, tu primera clase es gratis</p>
+                <a href="#registro" class="text-center mt-5"><button class="btn btn-dark">Sumate</button></a>
+            </div>
+        </section>
+        <section id="quienessomos">
+            <div class="row justify-content-center align-items-center my-5 border-top border-bottom border-2  py-2">
+                <h2 class="text-center">¿Quienes somos?</h2>
+                <p class="text-center my-3 px-5">Somos más que un Gimnasio, somos un centro de mútiples deportes. Contamos con los mejores y más dedicados profesionales de distintas areas para brindarte todo aquello que necesites para mejorar tu salud y sentirte cada día mejor.</p>
+                <p class="text-center my-3 px-5">Seas un amante del deporte como nosotros o bien quieras iniciar en este mundo y prácticar una actividad física para mejorar tu salud, contamos con todo el equipamiento y un staff de profesores para indicarte como iniciar o bien para ayudarte a superarte cada día</p>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </section>
+        <section id="registro">
+            <div class="row justify-content-center align-items-center my-5">
+                <div class="col-md-3">
+                    <h2 class="mb-5 text-center">Registrate</h2>
+                    <form method="post" action='' id="send" >
+                        <fieldset class="my-3">
+                            <div class="mb-3">
+                                <label for="first-name"><strong>Nombre:</strong> <input id="first-name" name="first-name" type="text" required /></label>
+                            </div>
+                            <div  class="mb-3">
+                                <label for="last-name"><strong>Apellido:</strong> <input id="last-name" name="last-name" type="text" required /></label>
+                            </div>
+                            <div  class="mb-3">
+                                <label for="email"><strong>Email:</strong> <input id="email" name="email" type="email" required /></label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="my-3">
+                            <div class="mb-3">
+                                <label for="profile-picture">Subí una foto tuya: </label>
+                            </div>
+                            <div class="mb-3">
+                                <input id="profile-picture" type="file" name="file" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="age">Ingresá tu edad(en números): </label>
+                            </div>
+                            <div class="mb-3">
+                                <input id="age" type="number" name="age" min="13" max="120" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="referrer">¿Cómo te enteraste de Spartan Fitness Center?
+                            </div>
+                            <div class="mb-3">
+                                <select id="referrer" name="referrer">
+                                    <option value="">(Seleccioná una)</option>
+                                    <option value="1">Facebook</option>
+                                    <option value="2">Instagram</option>
+                                    <option value="3">Youtube</option>
+                                    <option value="4">Otro</option>
+                                </select>
+                            </div>
+                        </label>
+                        <label for="bio">Contanos cuales son tus intereses y objetivos:
+                            <div class="mb-2">
+                                <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Me gustaría..." class="mt-3"></textarea>
+                            </div>
+                        </label>
+                        </fieldset>
+                        <fieldset class="my-2">
+                            <label for="terms-and-conditions">
+                            <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="mx-2 mb-3" />Acepto los <a href="">términos y condiciones</a>
+                            </label>
+                        </fieldset>
+                        <input type="submit" value="Enviar"  id="" class="btn btn-dark"/>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="actividades">
+            <div class="row justify-content-center align-items-center my-3 border-top border-2 py-2">
+                <div class="col-md-6">
+                    <h2 class="text-center mb-3">Actividades</h2>
+                    <p class="text-center px-5">En esta sección te contamos las activades que podés prácticar y sus respectivos precios.</p>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Pase Libre
+                            </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Involucra todas las actividades.</strong> <p>Con la obtención del pase libre podrás realizar todas las actividades que se realizan en Spartan Fitness Center.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Crossfit
+                            </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Es una actividad de alta intensidad.</strong> <p>Es un método de entrenamiento basado en ejercicios constantemente variados y peso con barra, con movimientos funcionales ejecutados a alta intensidad. Se trata de un entrenamiento basado en los ejercicios de cuerpos militares, policiales y de bomberos. Ofrece resultados rápidos, quema grasa y trabaja todos los músculos de nuestro cuerpo, por lo que permite obtener una figura mucho más estilizada en poco tiempo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                GAP
+                            </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Es un actividad de intensidad media y focalizada.</strong> <p>El GAP es un conjunto de ejercicios orientados al trabajo de los glúteos, los abdominales y las piernas. De hecho, el significado de las siglas GAP es ese mismo: glúteos, abdominales y piernas, en referencia a las zonas trabajadas durante la actividad. Permite fortalecer los glúteos, los abdominales y las piernas, la quema de grasa y, con ello, la tonificación y la definición muscular, pero también va a permitir corregir en cierta medida problemas posturales y reducir la celulitis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                Zumba
+                            </button>
+                            </h2>
+                            <div id="collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Es una actividad de intensidad media y aeróbica.</strong> <p>Zumba es una disciplina deportiva en la que se realizan ejercicios aeróbicos al ritmo de música latina (merengue, samba, reggaeton, cumbia y salsa) con la finalidad de perder peso de forma divertida. Permite mejorar el sistema cardiovascular y la quema de grasas, la tonificación y aumenta la cordinación.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                Step
+                            </button>
+                            </h2>
+                            <div id="collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Es una actividad de alta intensidad y aeróbica</strong> <p>El step es una actividad principalmente aeróbica, con periodos de entrenamiento anaeróbico, es decir que ayuda a fortalecer el sistema cardiovascular a través de un trabajo de resistencia muscular del tren inferior y superior. También tonifica la musculatura.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                                Musculación
+                            </button>
+                            </h2>
+                            <div id="collapsesix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Es una actividad de intesidad media a alta.</strong> <p>Es una actividad física consistente en la realización de un programa de entrenamiento con pesas con la intención de desarrollar y controlar la musculatura, por medio de diversos tipos de ejercicios de fuerza, orientados a generar hipertrofia muscular.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                                Spinning
+                            </button>
+                            </h2>
+                            <div id="collapseseven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Es una actividad de intensidad muy alta.</strong> <p> Es un ejercicio aeróbico y cardiovascular que se realiza sobre una bicicleta estática en el que se trabaja el tren inferior: las piernas y los glúteos. Su finalidad principal es perder peso y la tonificación de los músculos, además de mejorar la fuerza y la resistencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---------------Consultar actividades------------------------->
+                <div class="row my-5 justify-content-center align-items-center border-top border-bottom border-2 py-2">
+                    <div class="col-md-6">
+                        <h3 class="text-center">
+                            Consultar precios de actividades
+                        </h3>
+                        <p class="text-center my-3 px-3"> Ahora conocés nuestras actividades y que implica cada una de ellas. Si te interesó una o varias, podes consultar los precios de cada una.</p>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-md-3">
+                                <!---------------aca esta el input para tomar el dato y usar le find con dom------------------------->
+                                <input type="text" id="busquedaActividad" placeholder="Escribí el nombre de la actividad que queres consultar..." >
+                                <!---------------Este div de abajo puede servir para mostrar el resultado con js------------------------->
+                               <div class="row justify-content-center align-items-center">
+                                    <div class="col-md-1">
+                                        <button type="submit" class="btn btn-dark mt-3" id="buscar"> Buscar</button>
+                                    </div>
+                               </div>
+                               <div class="row justify-content-center align-items-center my-3 text-center fw-bolder" id="resultadoActividadBuscada"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---------------FIN Consultar actividades------------------------->
+                <!---------------Primera Opción para el presupuesto con inputs------------------------->
+                <div class="row justify-content-center align-items-center my-5">
+                    <h2 class="text-center">Consulta tu presupuesto</h2>
+                    <div class="col-md-3">
+                        <form method="post" action=''>
+                            <fieldset class="my-3">
+                                <div class="mb-3">
+                                    <label for="">Escribí el nombre (o número) de la actividad que queres realizar:<input id="actividaduno" name="actividaduno" type="text" required /></label>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Escribí tu genero: <input id="gen" name="gen" type="text" required /></label>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">¿Es tu primera vez? (Si/No):<input id="primeravez" name="primeravez" type="text" required /></label>
+                                </div>
+                            </fieldset>
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-md-1">
+                                        <button type="submit" class="btn btn-dark mt-3" id=""> Consultar</button>
+                                        <div class="text-center display-5 fw-bolder" id=""></div>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+                <!---------------FIN Primera opción para el presupuesto------------------------->
+                <!---------------Segunda opción para el presupuesto usando inputs tipo radioselector------------------------>
+                <div class="row justify-content-center align-items-center my-5">
+                    <div class="col-md-3">
+                        <form method="post" action=''>
+                            <fieldset class="my-3">
+                                <label for="actividadPresupuesto">¿Selecciona la actividad que queres realizar:
+                                </div>
+                                <div class="mb-3 text-center">
+                                    <select id="actividadPresupuesto" name="actividadPresupuesto">
+                                        <option value="0" id="">(Seleccioná una)</option>
+                                        <option value="5000" id="">Pase libre</option>
+                                        <option value="3000" id="">Crossfit</option>
+                                        <option value="2500" id="">GAP</option>
+                                        <option value="4200" id="">Zumba</option>
+                                        <option value="3500" id="">Step</option>
+                                        <option value="4000" id="">Musculación</option>
+                                        <option value="4100" id="">Spinning</option>
+                                    </select>
+                                </div>
+                                </label>
+                            </fieldset>
+                            <div>
+                                <fieldset class="my-2 text-center">
+                                    <label>¿Es tu Primera vez?
+                                    <input id="radio1" type="radio" required name="primero" value="si" class="mx-2 mb-3" />Si
+                                    <input id="radio2" type="radio" required name="primero" value="no" class="mx-2 mb-3" />No
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div>
+                                <fieldset class="my-2 text-center">
+                                    <label>Selecciona tu Genero:
+                                    <input  id="radio3" type="radio" required name="genero" value="masculino" class="mx-2 mb-3" />Masculino
+                                    <input id="radio4" type="radio" required name="genero" value="femenino" class="mx-2 mb-3" />Femenino
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-1">
+                                    <button type="submit" class="btn btn-dark mt-3" id="consultar" >Calcular Presupuesto</button>
+                                    <div class="text-center display-5 fw-bolder mb-4" id="resultadoPresupuesto"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </section>
+        <section id="contacto">
+            <h2 class="text-center mb-5">Contacto</h2>
+            <div class="row justify-content-center align-items-center mb-5">
+                <div class="col-md-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13120.861275519012!2d-58.3166745!3d-34.6997487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3332d1a5f1321%3A0xe6da896030ede119!2sSparta%20Fitness%20Center!5e0!3m2!1ses-419!2sar!4v1688182171149!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="img-fluid"></iframe>
+                </div>
+                <div class="col-md-5">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-3 me-2" height="2em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <i class="fa-solid fa-location-dot fa-2xl" style="color: #000000;">Bahía Blanca 279, B1875 Wilde, Provincia de Buenos Aires</i>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-3 me-2" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                        <i class="fa-solid fa-phone fa-2xl" style="color: #000000;">01143116082</i>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-3 me-2" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+                        <i class="fa-regular fa-envelope fa-2xl" style="color: #000000;">spartanfitnesscenter@gmail.com</i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="row justify-content-center align-items-center border-top border-2">
+            <div class="col-md-3">
+                <p class="text-center">Seguinos en las redes sociales:</p>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6 pb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M224 122.8c-72.7 0-131.8 59.1-131.9 131.8 0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6 49.9-13.1 4.8 2.9c20.2 12 43.4 18.4 67.1 18.4h.1c72.6 0 133.3-59.1 133.3-131.8 0-35.2-15.2-68.3-40.1-93.2-25-25-58-38.7-93.2-38.7zm77.5 188.4c-3.3 9.3-19.1 17.7-26.7 18.8-12.6 1.9-22.4.9-47.5-9.9-39.7-17.2-65.7-57.2-67.7-59.8-2-2.6-16.2-21.5-16.2-41s10.2-29.1 13.9-33.1c3.6-4 7.9-5 10.6-5 2.6 0 5.3 0 7.6.1 2.4.1 5.7-.9 8.9 6.8 3.3 7.9 11.2 27.4 12.2 29.4s1.7 4.3.3 6.9c-7.6 15.2-15.7 14.6-11.6 21.6 15.3 26.3 30.6 35.4 53.9 47.1 4 2 6.3 1.7 8.6-1 2.3-2.6 9.9-11.6 12.5-15.5 2.6-4 5.3-3.3 8.9-2 3.6 1.3 23.1 10.9 27.1 12.9s6.6 3 7.6 4.6c.9 1.9.9 9.9-2.4 19.1zM400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM223.9 413.2c-26.6 0-52.7-6.7-75.8-19.3L64 416l22.5-82.2c-13.9-24-21.2-51.3-21.2-79.3C65.4 167.1 136.5 96 223.9 96c42.4 0 82.2 16.5 112.2 46.5 29.9 30 47.9 69.8 47.9 112.2 0 87.4-72.7 158.5-160.1 158.5z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="bg-dark text-white text-center">Desarrollado por Magaly Gallardo- Todos los derechos reservados - 2023</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
