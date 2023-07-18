@@ -1,102 +1,88 @@
-  // Consultar precio de actividad (hay que escribir con las respectivas mayúsculas) 
-     // Se agregan Dom, se eliminan los prompt y alerts, se realiza evento
-            
-let actividadBuscada = document.getElementById("busquedaActividad");
 
-function busquedaActividad() {
-  const precioActividad = [
-     { nombre: "Pase Libre", precio: 5000 },
-     { nombre: "CrossFit", precio: 3000 },
-     { nombre: "GAP", precio: 2500 },
-     { nombre: "Zumba", precio: 4200 },
-     { nombre: "Step", precio: 3500 },
-     { nombre: "Musculación", precio: 4000 },
-     { nombre: "Spinning", precio: 4100 },
-   ];
-  return precioActividad.find((el) => el.nombre === actividadBuscada.value);
- }
+// Consultar precio de actividad (hay que escribir con las respectivas mayúsculas) 
+            
+          let actividadBuscada = document.getElementById("busquedaActividad");
 
-let buscar = document.getElementById("buscar");
-buscar.addEventListener("click", respuestaClick);
+          function busquedaActividad() {
+            const precioActividad = [
+              { nombre: "Pase Libre", precio: 5000 },
+              { nombre: "CrossFit", precio: 3000 },
+              { nombre: "GAP", precio: 2500 },
+              { nombre: "Zumba", precio: 4200 },
+              { nombre: "Step", precio: 3500 },
+              { nombre: "Musculación", precio: 4000 },
+              { nombre: "Spinning", precio: 4100 },
+            ];
+            return precioActividad.find((el) => el.nombre === actividadBuscada.value);
+          }
 
-            
-function respuestaClick() {
-  let mensaje = document.getElementById("resultadoActividadBuscada");
-  let actividadEncontrada = busquedaActividad();
-              
-  if (actividadEncontrada) {
-     mensaje.innerHTML = ("El precio de la actividad es de: $" + actividadEncontrada.precio);
-    } else {
-     mensaje.innerHTML = "Actividad no encontrada";
-    }
-  }
-            
-            
+          let buscar = document.getElementById("buscar");
+          buscar.addEventListener("click", respuestaClick);
+
+                      
+          function respuestaClick() {
+            let mensaje = document.getElementById("resultadoActividadBuscada");
+            let actividadEncontrada = busquedaActividad();
+                        
+            if (actividadEncontrada) {
+              mensaje.innerHTML = ("El precio de la actividad es de: $" + actividadEncontrada.precio);
+              } else {
+              mensaje.innerHTML = "Actividad no encontrada";
+              }
+            }
+                      
+                      
             //Proyecto Presupuesto
-         
-           
-            let actividadPresupuesto = document.querySelector("#actividadPresupuesto");
-            const radioSeleccionado = document.querySelector('input[type="radio"]:checked');
-            
-            function presupuestoForm(e) {
-              e.preventDefault();
-              let presupuesto = 0;
-            
-              if (radioSeleccionado.value === "si" && radioSeleccionado.name === "masculino") {
-                presupuesto = (actividadPresupuesto.value / 2) - (actividadPresupuesto.value * 10 / 100);
-              } else if (radioSeleccionado.value === "si" && radioSeleccionado.name === "femenino") {
-                presupuesto = (actividadPresupuesto.value / 2) - (actividadPresupuesto.value * 5 / 100);
-              } else if (radioSeleccionado.value === "no" && radioSeleccionado.name === "masculino") {
-                presupuesto = (actividadPresupuesto.value * 10) / 100;
-              } else {
-                presupuesto = (actividadPresupuesto.value * 5) / 100;
-              }
-            
-              return presupuesto;
-            }
-            
-            let consultar = document.getElementById("consultar");
-            consultar.addEventListener("submit", presupuesto);
-            
-            function presupuesto(e) {
-              e.preventDefault();
-              let consultarPresupuesto = document.getElementById("resultadoPresupuesto");
-              let presupuestoEncontrado = presupuestoForm(e);
-            
-              if (presupuestoEncontrado) {
-                consultarPresupuesto.innerHTML = "El precio final es de: $" + presupuestoEncontrado;
-              } else {
-                consultarPresupuesto.innerHTML = "No se encontró presupuesto.";
-              }
-            }
-            
 
+              function calcularPresupuesto() {
+                
+                const actividad = document.getElementById('actividadPresupuesto').value;
+                const isFirstTime = document.querySelector('input[name="primero"]:checked').value === 'si';
+                const genero = document.querySelector('input[name="genero"]:checked').value;
+
+              
+                let presupuesto = parseFloat(actividad);
+                if (isFirstTime) {
+                  presupuesto *= 0.8; 
+                }
+                if (genero === 'femenino') {
+                  presupuesto *= 0.9; 
+                }
+
+                document.getElementById('resultadoPresupuesto').textContent = `El presupuesto es: $${presupuesto.toFixed(2)}`;
+              }
+
+              document.getElementById('consultar').addEventListener('submit', function (event) {
+                event.preventDefault(); 
+                calcularPresupuesto(); 
+              });
   
         //Storage & JSON (reparado codigo)
 
-function guardarLocalStorage(e) {
-  e.preventDefault();
-  
-  let persona = {
-    nombre: document.getElementById("first-name").value,
-    apellido: document.getElementById("last-name").value,
-    email: document.getElementById("email").value,
-    edad: document.getElementById("age").value
-  };
-  
-  localStorage.setItem('persona', JSON.stringify(persona));
-}
+            function guardarLocalStorage(e) {
+              e.preventDefault();
+              
+              let persona = {
+                nombre: document.getElementById("first-name").value,
+                apellido: document.getElementById("last-name").value,
+                email: document.getElementById("email").value,
+                edad: document.getElementById("age").value
+              };
+              
+              localStorage.setItem('persona', JSON.stringify(persona));
+            }
 
-function obtenerLocalStorage() {
-  if (localStorage.getItem('persona')) {
-    let persona = JSON.parse(localStorage.getItem('persona'));
-    console.log(persona);
-  } else {
-    console.log("No hay registros");
-  }
-}
+            function obtenerLocalStorage() {
+              if (localStorage.getItem('persona')) {
+                let persona = JSON.parse(localStorage.getItem('persona'));
+                console.log(persona);
+              } else {
+                console.log("No hay registros");
+              }
+            }
 
-document.getElementById("send").addEventListener("submit", (e) => {
-  guardarLocalStorage(e);
-  obtenerLocalStorage();
-});
+            document.getElementById("send").addEventListener("submit", (e) => {
+              guardarLocalStorage(e);
+              obtenerLocalStorage();
+            });
+
