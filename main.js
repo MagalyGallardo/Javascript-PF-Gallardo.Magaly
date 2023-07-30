@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function () {
+  Swal.fire({
+    icon: 'info',
+    title: '¡Bienvenido!',
+    text: 'Si es tu primera vez, tenés un 20% de descuento en tu presupuesto.',
+    confirmButtonText: 'Aceptar'
+  });
+});
 
 // Consultar precio de actividad (hay que escribir con las respectivas mayúsculas) 
             
@@ -32,7 +40,7 @@
             }
                       
                       
-            //Proyecto Presupuesto
+            //Presupuesto
 
               function calcularPresupuesto() {
                 
@@ -48,16 +56,33 @@
                 if (genero === 'femenino') {
                   presupuesto *= 0.9; 
                 }
-
-                document.getElementById('resultadoPresupuesto').textContent = `El presupuesto es: $${presupuesto.toFixed(2)}`;
+                
+                document.getElementById('resultadoPresupuesto').textContent = `Tu presupuesto es de: $${presupuesto.toFixed(2)}`;
               }
 
               document.getElementById('consultar').addEventListener('submit', function (event) {
                 event.preventDefault(); 
                 calcularPresupuesto(); 
               });
-  
-        //Storage & JSON (reparado codigo)
+              
+              document.getElementById('primeraVez').addEventListener('click', function () {
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Descuento por Primera Vez',
+                  text: '¡Tenés un 20% de descuento en tu presupuesto!',
+                  confirmButtonText: 'Aceptar'
+                });
+              });
+              document.getElementById('generoFemenino').addEventListener('click', function () {
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Descuento por Género Femenino',
+                  text: '¡Tenés un 10% de descuento en tu presupuesto!',
+                  confirmButtonText: 'Aceptar'
+                });
+              });
+
+        //Storage & JSON 
 
             function guardarLocalStorage(e) {
               e.preventDefault();
@@ -69,7 +94,17 @@
                 edad: document.getElementById("age").value
               };
               
+              let personas = obtenerPersonasRegistradas();
+              personas.push(persona);
               localStorage.setItem('persona', JSON.stringify(persona));
+            }
+
+            function obtenerPersonasRegistradas() {
+              let personas = [];
+              if (localStorage.getItem('personas')) {
+                personas = JSON.parse(localStorage.getItem('personas'));
+              }
+              return personas;
             }
 
             function obtenerLocalStorage() {
@@ -84,5 +119,46 @@
             document.getElementById("send").addEventListener("submit", (e) => {
               guardarLocalStorage(e);
               obtenerLocalStorage();
+              Swal.fire({
+                icon: 'success',
+                title: 'Te has registrado exitosamente',
+                text: '¡Gracias por registrarte en Spartan Fitness Center!',
+                confirmButtonText: 'Aceptar'
+              });
             });
 
+            //Modal de términos y condiciones
+            const myModal = document.getElementById('myModal')
+            const myInput = document.getElementById('myInput')
+
+            myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+          })
+
+          //API Indice de Masa Corporal
+          const urlApi = 'https://body-mass-index-bmi-calculator.p.rapidapi.com/metric';
+
+          async function obtenerIMC() {
+            const altura = document.getElementById("altura").value;
+            const peso = document.getElementById("peso").value;
+     
+            try {
+              const response = await fetch(`${urlApi}?weight=${peso}&height=${altura}`, {
+                method: 'GET',
+                headers: {
+                  'X-RapidAPI-Key': '93994dc17cmshb906990761073cdp1b7dc3jsn57fb06bb9b81',
+                  'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com'
+                },
+              });
+          
+              const data = await response.json();
+              const resultadoIMC = data.bmi.toFixed(2); 
+              document.getElementById("resultadoImc").innerHTML = `Tu IMC es: ${resultadoIMC}`;
+            } catch (error) {
+              console.error(error);
+            }
+            document.getElementById("calcular").addEventListener("submit", obtenerIMC);
+            e.preventDefault();
+          }
+
+        
