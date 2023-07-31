@@ -137,11 +137,11 @@
             </div>
         </section>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">TÉRMINOS Y CONDICIONES</h1>
+                  <h1 class="modal-title fs-5" id="myInput">TÉRMINOS Y CONDICIONES</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -271,9 +271,8 @@
                         </h3>
                         <p class="text-center my-3 px-3 fst-italic"> Ahora conocés nuestras actividades y que implica cada una de ellas. Si te interesó una o varias, podes consultar los precios de cada una.</p>
                         <div class="row justify-content-center align-items-center">
-                        <!---------------aca esta el input para tomar el dato y usar le find con dom------------------------->
                             <input type="text" id="busquedaActividad" placeholder="Escribí el nombre de la actividad que queres consultar..." >
-                        <!---------------Este div de abajo puede servir para mostrar el resultado con js------------------------->
+                        <!---------------Este div de abajo es para mostrar el resultado con js------------------------->
                             <button type="submit" class="btn btn-dark mt-3" id="buscar"> Buscar</button>
                             <div class="row justify-content-center align-items-center my-3 text-center fw-bolder" id="resultadoActividadBuscada"></div>
                         </div>
