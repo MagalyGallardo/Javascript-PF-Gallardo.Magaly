@@ -127,10 +127,12 @@ const urlApi = 'https://body-mass-index-bmi-calculator.p.rapidapi.com/metric';
 async function obtenerIMC(e) {
   e.preventDefault();
   const altura = document.getElementById("altura").value;
-  const peso = document.getElementById("peso").value;
+  const pesoKilogramos = document.getElementById("peso").value;
+
+  const pesoDecigramos = pesoKilogramos * 10000;
 
   try {
-    const response = await fetch(`${urlApi}?weight=${peso}&height=${altura}`, {
+    const response = await fetch(`${urlApi}?weight=${pesoDecigramos}&height=${altura}`, {
     method: 'GET',
     headers: {
     'X-RapidAPI-Key': '93994dc17cmshb906990761073cdp1b7dc3jsn57fb06bb9b81',
