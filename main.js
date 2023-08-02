@@ -14,7 +14,7 @@ let actividadBuscada = document.getElementById("busquedaActividad");
 function busquedaActividad() {
     const precioActividad = [
     { nombre: "Pase Libre", precio: 5000 },
-    { nombre: "CrossFit", precio: 3000 },
+    { nombre: "Crossfit", precio: 3000 },
     { nombre: "GAP", precio: 2500 },
     { nombre: "Zumba", precio: 4200 },
     { nombre: "Step", precio: 3500 },
@@ -35,7 +35,7 @@ function respuestaClick() {
   if (actividadEncontrada) {
   mensaje.innerHTML = ("El precio de la actividad es de: $" + actividadEncontrada.precio);
   } else {
-  mensaje.innerHTML = "Actividad no encontrada";
+  mensaje.innerHTML = "Actividad no encontrada, recuerda escribir el nombre respetando las mayúsculas";
   }
 }
 
@@ -114,8 +114,8 @@ document.getElementById("send").addEventListener("submit", (e) => {
 });
 
 //Modal de términos y condiciones
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
+const myModal = document.getElementById('exampleModal');
+const myInput = document.getElementById('myInput');
 
 myModal.addEventListener('shown.bs.modal', () => {
 myInput.focus()
