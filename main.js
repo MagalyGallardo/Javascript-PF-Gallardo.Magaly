@@ -115,7 +115,7 @@ document.getElementById("send").addEventListener("submit", (e) => {
 
 //Modal de términos y condiciones
 const myModal = document.getElementById('exampleModal');
-const myInput = document.getElementById('myInput');
+const myInput = document.getElementById('exampleModalLabel');
 
 myModal.addEventListener('shown.bs.modal', () => {
 myInput.focus()
