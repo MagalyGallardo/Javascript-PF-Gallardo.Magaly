@@ -21,6 +21,9 @@ p,label, input, button, select, option {
 img {
     border-radius: 10px;
 }
+input {
+    color: rgb(109, 109, 238);
+}
 .container_inicio{
     background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)), url(img/peso-muerto.jpeg), no-repeat;
     background-size: cover;
